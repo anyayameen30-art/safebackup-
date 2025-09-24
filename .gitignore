@@ -1,0 +1,6 @@
+# generated backup files
+*.tar.gz
+*.sha256
+
+# if you ever test inside the repo
+backups/
