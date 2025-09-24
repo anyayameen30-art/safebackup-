@@ -29,7 +29,7 @@ tar -czf "$ARCHIVE" \
 sha256sum "$ARCHIVE" > "${ARCHIVE}.sha256"
 
 echo "[*] Applying retention --> Keep last ${RETAIN_COUNT}"
-ls -lt "{BACKUP_DIR}"/"${HOST}-backup-"*.tar.gz 2>/dev/null | tail -n +$((RETAIN_COUNT+1)) | xargs -r rm -f
+ls -lt "${BACKUP_DIR}"/"${HOST}-backup-"*.tar.gz 2>/dev/null | tail -n +$((RETAIN_COUNT+1)) | xargs -r rm -f
 
 SIZE=$(du -h "$ARCHIVE" | awk '{print $1')
 echo "Done --> The file is: $ARCHIVE & the size is: $SIZE"
