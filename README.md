@@ -17,23 +17,23 @@ This project demonstrates shell scripting, archiving, and checksum verification.
 ---
 
 #Project Structure
-backup.sh # create a backup
-restore.sh # restore from a backup
-.gitignore # ignore archives/checksums in Git
-README.md # this file
+1. backup.sh # create a backup
+2. restore.sh # restore from a backup
+3. .gitignore # ignore archives/checksums in Git
+4. README.md # this file
 
 #Usage
-#1. Backup
-chmod +x backup.sh
-sudo ./backup.sh
+1. Backup
+- chmod +x backup.sh
+- sudo ./backup.sh
 
 #Output Example:
 localhost-backup-2025-09-24T19:01:52Z.tar.gz
 localhost-backup-2025-09-24T19:01:52Z.tar.gz.sha256
 
-#2.Restore
-chmod +x restore.sh
-sudo ./restore.sh ~/backups/<archive>.tar.gz /tmp/restore_test
+2. Restore
+- chmod +x restore.sh
+- sudo ./restore.sh ~/backups/<archive>.tar.gz /tmp/restore_test
 
 #Output Example:
 Verifying checksum...
